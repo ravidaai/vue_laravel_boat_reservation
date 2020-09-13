@@ -36,6 +36,12 @@
             </div>
 
             <div class="form-row">
+                <label for="phone">Phone</label> 
+                <input type="tel" class="input-text" name="phone" id="phone" value="{{ old('phone') }}">
+                @error('phone')<div class="alert alert-danger">{{ $message }}</div>@enderror
+            </div>
+
+            <div class="form-row">
                 <label for="state">State</label>
                 {!! Form::select('state',$stateArr,null,['class'=>'input-text']) !!}
               @error('state')<div class="alert alert-danger">{{ $message }}</div>@enderror

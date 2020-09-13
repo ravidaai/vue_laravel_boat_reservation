@@ -23,6 +23,7 @@
             <h2>Your detail</h2>
             <p class="text-1"><strong>Name: </strong> {{$name}}</p>
             <p class="text-1"><strong>Email: </strong> {{$email}}</p>
+            <p class="text-1"><strong>Phone: </strong> {{$phone}}</p>
             <p class="text-1"><strong>State: </strong> {{$state}}</p>
 
         </div>
@@ -33,6 +34,7 @@
           @method('POST')
     {{ Form::hidden('name', $name) }}
 {{ Form::hidden('email', $email) }}
+{{ Form::hidden('phone', $phone) }}
 {{ Form::hidden('state', $state) }}
 
 @if (Session::has('success'))

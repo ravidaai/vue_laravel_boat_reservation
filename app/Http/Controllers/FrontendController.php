@@ -18,12 +18,12 @@ class FrontendController extends Controller
 
     public function payment(InquiryRequest $request)
     {
-        return redirect(Url::signedRoute('make.payment_process', ['name' => $request->input('name'), 'email' => $request->input('email'), 'state' => $request->input('state')]));
+        return redirect(Url::signedRoute('make.payment_process', ['name' => $request->input('name'), 'email' => $request->input('email'), 'state' => $request->input('state'), 'phone' => $request->input('phone')]));
     }
 
     public function paymentProcess(Request $request)
     {
-        return view('stripe', ['name' => $request->input('name'), 'email' => $request->input('email'), 'state' => $request->input('state')]);        
+        return view('stripe', ['name' => $request->input('name'), 'email' => $request->input('email'), 'state' => $request->input('state'), 'phone' => $request->input('phone')]);        
     }
 
     public function paymentSuccess(StripeRequest $request)
@@ -34,7 +34,7 @@ class FrontendController extends Controller
                 "currency" => "usd",
                 "source" => $request->stripeToken,
                 "description" => env('PAID_FOR'),
-                "metadata" => array("name" => $request->name, 'email' => $request->email, 'state' => $request->state)
+                "metadata" => array("name" => $request->name, 'email' => $request->email, 'state' => $request->state, 'phone' => $request->phone)
         ]);
 
         //'stripe_receipt_url' => $charge->receipt_url
@@ -43,7 +43,7 @@ class FrontendController extends Controller
         // $data = ['message' => 'This is a test!'];
         // Mail::to(env('COMPANY_EMAIL'))->send(new RegistrationEmail($data));
 
-        //Mail::to('ravidaai@gmail.com')->send(new RegistrationEmail());
+        //Mail::to('codewithravi@gmail.com')->send(new RegistrationEmail());
 	    //dd('mail sent');
     
         Session::flash('success', 'Payment has been successfully processed.');
