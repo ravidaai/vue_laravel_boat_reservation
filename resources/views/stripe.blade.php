@@ -20,7 +20,7 @@
       
 
         <div class="form-left">
-            <h2>Your detail</h2>
+            <h2>Your details: </h2>
             <p class="text-1"><strong>Name: </strong> {{$name}}</p>
             <p class="text-1"><strong>Email: </strong> {{$email}}</p>
             <p class="text-1"><strong>Phone: </strong> {{$phone}}</p>

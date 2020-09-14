@@ -10,9 +10,7 @@
 <div class="page-content">
     <div class="form-v4-content">
         <div class="form-left">
-            <h2>Some Title</h2>
-            <p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
-            <p class="text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
+            <img src="{{asset('img/review-1.png')}}" width="100%">
            
         </div>
 
