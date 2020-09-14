@@ -37,14 +37,9 @@ class FrontendController extends Controller
                 "metadata" => array("name" => $request->name, 'email' => $request->email, 'state' => $request->state, 'phone' => $request->phone)
         ]);
 
-        //'stripe_receipt_url' => $charge->receipt_url
-        
-        //send email here
-        // $data = ['message' => 'This is a test!'];
-        // Mail::to(env('COMPANY_EMAIL'))->send(new RegistrationEmail($data));
 
-        //Mail::to('codewithravi@gmail.com')->send(new RegistrationEmail());
-	    //dd('mail sent');
+        $data = ['name' => $request->name, 'email' => $request->email, 'state' => $request->state, 'phone' => $request->phone, 'stripe_receipt_url' => $charge->receipt_url];
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new RegistrationEmail($data));
     
         Session::flash('success', 'Payment has been successfully processed.');
         return back();

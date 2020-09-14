@@ -21,9 +21,9 @@ class RegistrationEmail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //$this->data = $data;
+        $this->data = $data;
     }
 
     /**
@@ -34,25 +34,11 @@ class RegistrationEmail extends Mailable
     public function build()
     {
 
-        $subject = 'test';//$this->data['subject'];
-        $to = 'codewithravi@gmail.com';//$this->data['to_email'];
-        $from    = 'ravidaai@gmail.com';//$this->data['from_email'];
-        $from_name    = 'Boat Registration USA';
+        return $this->view('emails.reservation')
+                    ->replyTo($this->data['email'], $this->data['name'])
+                    ->subject("Boat Registration");
 
-        
-        return $this
-        ->view('emails.reservation')
-        ->subject($subject)
-        ->from($from, $from_name)
-        ->to([$to])
-        ->sendgrid([
-            'personalizations' => [
-                [
-                    'substitutions' => [
-                        ':myname' => $from_name,
-                    ],
-                ],
-            ],
-        ]);
+
+        //return  $this->view('emails.reservation');
     }
 }
