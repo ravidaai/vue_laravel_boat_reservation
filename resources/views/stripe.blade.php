@@ -81,7 +81,7 @@
           <div class='form-row row'>
             <div class='col-md-12 hide error form-group'>
 
-                <label class="error">Fix the errors before you begin.</label>
+                <label class="error alert">Fix the errors before you begin.</label>
             </div>
         </div>
             <div class="form-row-last">
