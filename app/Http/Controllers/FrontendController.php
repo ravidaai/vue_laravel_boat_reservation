@@ -41,7 +41,7 @@ class FrontendController extends Controller
         $data = ['name' => $request->name, 'email' => $request->email, 'state' => $request->state, 'phone' => $request->phone, 'stripe_receipt_url' => $charge->receipt_url];
         Mail::to(env('MAIL_TO_ADDRESS'))->send(new RegistrationEmail($data));
     
-        Session::flash('success', 'Payment has been successfully processed.');
+        Session::flash('success', 'Payment has been successfully processed. We will be reaching out soon for details.');
         return back();
     }
 
