@@ -14,10 +14,10 @@
             <hr>
             <h3 class="text-center">FAQ’s</h3>
             <p class="faq-q">How long does it take to register a boat in Texas?</p>
-            <p class="faq-a"> - We submit your paperwork within 24 hours and typically receive your registration in 7-14 days.</p>
+            <p class="faq-a">We submit your paperwork within 24 hours and typically receive your registration in 7-14 days.</p>
 
             <p class="faq-q">What Government fees associated with registering a boat?</p>
-            <p class="faq-a">- Government fees range from around $20-$60 depending on the vessel and are included in the cost of signup.</p>
+            <p class="faq-a">Government fees range from around $20-$60 depending on the vessel and are included in the cost of signup.</p>
 <p>&nbsp;</p><p>&nbsp;</p>
             <img src="{{asset('img/review-1.png')}}" width="100%">
            
@@ -28,7 +28,7 @@
     {{ csrf_field() }}
     @method('POST')
             <h3 class="text-center">Register Your Boat in Texas Today.</h3>
-            <p>Boat Registration is only $100. Government Fees are inlcluded.</p>
+            <p>Boat Registration is only $100. Government Fees are included.</p>
            
             <div class="form-row">
                 <label for="name">Name</label>
