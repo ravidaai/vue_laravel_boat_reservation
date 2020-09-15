@@ -25,7 +25,7 @@
             <div class="header">
                 <div class="row">
                     <div class="col-md-4 my-auto">
-                        <img src="{{asset('img/logo.png')}}" width="80">
+                       <a href="/"> <img src="{{asset('img/logo.png')}}" width="80"></a>
                     </div>
                     <div class="col-md-4 my-auto dark-blue">
                         <h1 class="text-center resp-h1">Boat Registration USA</h1>
