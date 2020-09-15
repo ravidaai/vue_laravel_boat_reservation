@@ -20,11 +20,15 @@
       
 
         <div class="form-left">
-            <h2>Your details: </h2>
+            <h2>Boater Details:</h2>
+            <hr>
             <p class="text-1"><strong>Name: </strong> {{$name}}</p>
             <p class="text-1"><strong>Email: </strong> {{$email}}</p>
             <p class="text-1"><strong>Phone: </strong> {{$phone}}</p>
             <p class="text-1"><strong>State: </strong> {{$state}}</p>
+
+            <p>&nbsp;</p><p>&nbsp;</p>
+            <img src="{{asset('img/review-1.png')}}" width="100%">
 
         </div>
 
@@ -45,8 +49,9 @@
                     @endif
 
 
-            <h2>Payment for registration</h2>
-            <p class="registration">Boat Registration is only $100 plus Government fees</p>
+            <h2>Boat Registration Payment</h2>
+            <p class="registration">Boat Registration Service is only $100. Government Fees are Included.
+            </p>
 
             <div class="form-row">
                 <label>Your name card</label>
@@ -80,7 +85,8 @@
             </div>
         </div>
             <div class="form-row-last">
-              <input type="submit" name="register" class="register" value="HAPPY TO PAY">
+              <input type="submit" name="register" class="register" value="REGISTER NOW">
+              <p class="text-center"><strong>100% Satisfaction Guaranteed</strong></p>
              
             </div>
         </form>

@@ -10,6 +10,15 @@
 <div class="page-content">
     <div class="form-v4-content">
         <div class="form-left">
+            <h2 class="text-center">Fast & Easy Registration </h2>
+            <hr>
+            <h3 class="text-center">FAQ’s</h3>
+            <p class="faq-q">How long does it take to register a boat in Texas?</p>
+            <p class="faq-a"> - We submit your paperwork within 24 hours and typically receive your registration in 7-14 days.</p>
+
+            <p class="faq-q">What Government fees associated with registering a boat?</p>
+            <p class="faq-a">- Government fees range from around $20-$60 depending on the vessel and are included in the cost of signup.</p>
+<p>&nbsp;</p><p>&nbsp;</p>
             <img src="{{asset('img/review-1.png')}}" width="100%">
            
         </div>
@@ -18,7 +27,8 @@
 <form class="form-detail" method="POST" action="{{ route('make.payment') }}" id="myform">
     {{ csrf_field() }}
     @method('POST')
-            <h2>Register your boat in Texas Today!</h2>
+            <h3 class="text-center">Register Your Boat in Texas Today.</h3>
+            <p>Boat Registration is only $100. Government Fees are inlcluded.</p>
            
             <div class="form-row">
                 <label for="name">Name</label>
@@ -45,7 +55,7 @@
               @error('state')<div class="alert alert-danger">{{ $message }}</div>@enderror
             </div>
             <div class="form-row-last">
-                <input type="submit" name="register" class="register" value="Proceed">
+                <input type="submit" name="register" class="register" value="GET REGISTERED">
             </div>
         </form>
     </div>

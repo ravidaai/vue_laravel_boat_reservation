@@ -21,24 +21,23 @@
 @yield('header')
     </head>
     <body class="form-v4 bg">
-        <div class="container-fluid p-0">
+        <div class="container-fluid">
             <div class="header">
                 <div class="row">
-                    <div class="col-md-4 my-auto">
-                        <img src="{{asset('img/logo.png')}}" width="80">
+                    <div class="col-md-4">
+                        <img src="{{asset('img/logo.png')}}" width="100%">
                     </div>
-                    <div class="col-md-4 my-auto dark-blue">
-                        <h1 class="text-center resp-h1">Boat Registration USA</h1>
+                    <div class="col-md-4">
+                        <h1 class="text-center">Boat Registration USA</h1>
                     </div>
-                    <div class="col-md-4 my-auto">
-                        <h1 class="text-center resp-h1">Call us at xxx-xxx-xxxx</h1>
+                    <div class="col-md-4">
+                        <h1 class="text-center">Call us at xxx-xxx-xxxx</h1>
                         
                     </div>
                 </div>
-                
+                <h1 class="fast-easy">FAST & EASY - Boat Registration</h1>
+                <h2 class="subtitle">The only full service boat registration online</h2>
               </div>
-
-              <h2 class="subtitle p-4 my-5">The only full service boat registration online</h2>
             @yield('content')
             <p class="copyright-text">
                 Made in America by Boat Registration USA LLC © <?php echo date('Y'); ?> All Rights Reserved
