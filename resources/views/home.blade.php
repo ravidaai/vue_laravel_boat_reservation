@@ -28,7 +28,7 @@
     {{ csrf_field() }}
     @method('POST')
             <h3 class="text-center">Register Your Boat in Texas Today.</h3>
-            <p>Boat Registration is only $100. Government Fees are included.</p>
+            <p>Boat Registration is only ${{env('BOAT_FEE')}}. Government Fees are included.</p>
            
             <div class="form-row">
                 <label for="name">Name</label>
