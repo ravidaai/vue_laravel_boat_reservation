@@ -27,34 +27,34 @@
             <p class="text-1"><strong>Phone: </strong> {{$phone}}</p>
             <p class="text-1"><strong>State: </strong> {{$state}}</p>
 
-            <p>&nbsp;</p><p>&nbsp;</p>
-            <img src="{{asset('img/review-1.png')}}" width="100%">
+            <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+            <p class="text-center"><img src="{{asset('img/satisfaction-label.png')}}" width="90"></p>
+            <p style="font-weight: 500; font-size:14px; text-align:center;">Paperwork Registration LLC &copy; 2020 All Rights Reserved.</p>
+
 
         </div>
 
         <form role="form" action="{{ route('make.payment_success') }}" method="post" class="form-detail validation" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form">
 
-          @csrf
-          @method('POST')
-    {{ Form::hidden('name', $name) }}
-{{ Form::hidden('email', $email) }}
-{{ Form::hidden('phone', $phone) }}
-{{ Form::hidden('state', $state) }}
+            @csrf
+            @method('POST')
+            {{ Form::hidden('name', $name) }}
+            {{ Form::hidden('email', $email) }}
+            {{ Form::hidden('phone', $phone) }}
+            {{ Form::hidden('state', $state) }}
 
-@if (Session::has('success'))
-                        <div class="success-message">
-                           
-                            <p>{{ Session::get('success') }}</p>
-                        </div>
-                    @endif
+            @if (Session::has('success'))
+                <div class="success-message">
+                    <p>{{ Session::get('success') }}</p>
+                </div>
+            @endif
 
-
-            <h2>Boat Registration Payment</h2>
-            <p class="registration">Boat Registration Service is only $100. Government Fees are Included.
+            <h3 class="text-center">Boat Registration Payment</h3>
+            <p class="registration">Boat Registration Service is only ${{env('BOAT_FEE')}}. Government Fees are Included.
             </p>
 
             <div class="form-row">
-                <label>Your name card</label>
+                <label>Name on card</label>
                 <input type="text" class="input-text" value="{{$name}}" required>
             </div>
 

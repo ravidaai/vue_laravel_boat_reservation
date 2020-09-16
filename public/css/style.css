@@ -24,7 +24,8 @@ p.copyright-text{
     font-family: 'Montserrat', sans-serif;
     background-color: #216392;
     padding: 10px;
-    font-style: italic;
+	font-style: italic;
+	
 }
 p.faq-q{
 font-weight: bold!important;
