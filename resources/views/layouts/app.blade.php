@@ -40,9 +40,9 @@
 
               <h2 class="subtitle p-4 my-5">The only full service boat registration online</h2>
             @yield('content')
-            <p class="copyright-text">
-                Made in America by Boat Registration USA LLC © <?php echo date('Y'); ?> All Rights Reserved
-              </p>
+
+            <p class="copyright-text" style="font-weight: 500; font-size:14px; text-align:center;">Paperwork Registration LLC &copy; <?php echo date('Y'); ?> All Rights Reserved.</p>
+            
         </div>
     </body>
 

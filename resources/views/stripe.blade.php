@@ -29,7 +29,7 @@
 
             <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
             <p class="text-center"><img src="{{asset('img/satisfaction-label.png')}}" width="90"></p>
-            <p style="font-weight: 500; font-size:14px; text-align:center;">Paperwork Registration LLC &copy; 2020 All Rights Reserved.</p>
+            <p style="font-weight: 500; font-size:14px; text-align:center;">Paperwork Registration LLC &copy; <?php echo date('Y'); ?> All Rights Reserved.</p>
 
 
         </div>
