@@ -19,8 +19,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // })->name('home');
 
-Route::get('/', [FrontendController::class, 'index'])->name('home');
-Route::get('/payment_process', [FrontendController::class, 'paymentProcess'])->name('make.payment_process')->middleware('signed');
+Route::get('/', function () {
+    return response()->json(['Hellow World!!']);
+});
 
-Route::post('/payment', [FrontendController::class, 'payment'])->name('make.payment');
-Route::post('/payment_success', [FrontendController::class, 'paymentSuccess'])->name('make.payment_success');
+// Route::get('/', [FrontendController::class, 'index'])->name('home');
+// Route::get('/payment_process', [FrontendController::class, 'paymentProcess'])->name('make.payment_process')->middleware('signed');
+
+// Route::post('/payment', [FrontendController::class, 'payment'])->name('make.payment');
+// Route::post('/payment_success', [FrontendController::class, 'paymentSuccess'])->name('make.payment_success');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\InquiryRequest;
 use App\Http\Requests\StripeRequest;
+use App\Http\Requests\RequestRequest;
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\URL;
 use App\Mail\RegistrationEmail;
@@ -15,6 +16,25 @@ use Session;
 class FrontendController extends Controller
 {
 
+    public function register(RequestRequest $request)
+    {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $charge = Stripe\Charge::create ([
+                "amount" => env('BOAT_FEE')*100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => env('PAID_FOR'),
+                "metadata" => array("name" => $request->name, 'email' => $request->email, 'state' => $request->state, 'phone' => $request->phone, 'zip_code' => $request->zip_code)
+        ]);
+
+
+        $data = ['name' => $request->name, 'email' => $request->email, 'state' => $request->state, 'phone' => $request->phone, 'stripe_receipt_url' => $charge->receipt_url];
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new RegistrationEmail($data));
+
+        return response()->json([
+            'success' => 'true'
+        ]);
+    }
 
     public function payment(InquiryRequest $request)
     {
