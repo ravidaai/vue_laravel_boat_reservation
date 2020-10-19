@@ -1,0 +1,550 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#main_container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#form_container {
+  background-image: url("../img/simon.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px;
+}
+
+/* header start */
+header {
+  padding: 25px 0px;
+}
+header p.phone_number {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  text-align: right;
+  color: #000000;
+}
+
+header span {
+  font-family: Quattrocento;
+  font-style: normal;
+  padding: 0 5px 0;
+  display: inline-block;
+  font-size: 28px;
+  line-height: 31px;
+  color: #000000;
+}
+
+header span.bold {
+  font-weight: bold;
+}
+
+/* header end */
+
+.my_button {
+  background: #ef8a17;
+  border-radius: 8px;
+  border: 0;
+  color: #fff;
+  padding: 17px 48px;
+}
+.width_fill {
+  width: -webkit-fill-available;
+}
+/* form container start */
+#registration_form {
+  background: #ffffff url("../img/inclined-orange.png") no-repeat right top;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 40px;
+  position: relative;
+}
+
+.award_wining {
+  position: absolute;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  right: 0;
+  top: 44px;
+
+  transform: rotate(38.27deg);
+
+  /* Legacy vendor prefixes that you probably don't need... */
+
+  /* Safari */
+  -webkit-transform: rotate(38.27deg);
+
+  /* Firefox */
+  -moz-transform: rotate(38.27deg);
+
+  /* IE */
+  -ms-transform: rotate(38.27deg);
+
+  /* Opera */
+  -o-transform: rotate(38.27deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#registration_form h1 {
+  font-family: Quattrocento;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  color: #000000;
+}
+
+#registration_form h2 {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.feedback {
+  margin: 25px 0;
+}
+
+.feedback_text {
+  position: relative;
+  /* background-image: url("../img/white-arrow.png");  */
+  background-color: #ffffff; /* Used if the image is unavailable */
+  /* background-position: left; */
+  /* background-repeat: no-repeat;  */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding: 15px;
+  font-family: Quattrocento;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  width: 361px;
+}
+
+.feedback_text p {
+  padding: 0;
+  margin: 0;
+}
+
+.feedback_text .white_arrow {
+  position: absolute;
+  left: -37px;
+  top: 0;
+}
+
+/* form container end */
+
+/* review container start */
+#review_container {
+  padding: 35px 0;
+  background: #fff;
+}
+#review_container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#review_container ul li {
+  width: 20%;
+  padding: 25px 15px;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+#review_container ul li p {
+  min-height: 180px;
+}
+/* review container end */
+
+/* registered_boat_container start */
+#registered_boat_container {
+  background: #f6f7fa;
+  padding: 100px;
+}
+#registered_boat_container h1 {
+  font-family: Quattrocento;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  color: #000000;
+}
+
+#registered_boat_container p.para {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+#registered_boat_container p img {
+  float: left;
+  padding: 0 10px 0 0px;
+}
+
+/* registered_boat_container end */
+
+/* process_container start */
+#process_container {
+  padding: 100px;
+}
+#process_container h1 {
+  font-family: Quattrocento;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  color: #000000;
+}
+
+ul.process_list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul.process_list li {
+  padding: 60px 0px;
+  list-style: none;
+}
+
+span.box {
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+  padding: 40px 54px;
+  max-width: 172px;
+}
+ul.process_list li p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000000;
+  padding: 20px 10px;
+}
+.double-arrow {
+  margin-top: 55px;
+}
+
+/* process_container end */
+
+/* pricing_container start */
+#pricing_container {
+  background: #f6f7fa;
+  padding: 100px;
+}
+
+#pricing_container h1 {
+  font-family: Quattrocento;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+#pricing_container p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+}
+/* pricing_container end */
+
+/* footer start */
+footer {
+  padding: 100px 200px 50px 200px;
+  background: #024559;
+}
+footer p {
+  color: #fff;
+}
+footer p.aligned {
+  text-align: right;
+}
+footer button.aligned {
+  float: right;
+}
+footer p.copyright {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 50px;
+  color: #ffffff;
+}
+p.caption {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #ffffff;
+}
+/* footer end */
+
+#pricing,
+#registered_boat {
+  background: #f6f7fa;
+}
+
+/* error start */
+.error {
+  border-color: red;
+  background: #fdd;
+}
+
+.error:focus {
+  outline-color: #f99;
+}
+
+.valid {
+  border-color: #5a5;
+  background: #efe;
+}
+
+.valid:focus {
+  outline-color: #8e8;
+}
+/* error end */
+
+/* payment-container start */
+.payment-container {
+  position: relative;
+}
+.bg-cover {
+  position: absolute;
+  width: 100%;
+  min-height: 452px;
+  left: 0px;
+  top: 0px;
+  background: #024559;
+}
+.payment-form{
+  margin-top: 70px;
+  margin-bottom: 150px;
+  background-image: none!important;
+}
+
+.payment-form h1{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px!important;
+  line-height: 22px;
+  color: #000000;
+}
+
+.payment-form h1.payment{
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 32px!important;
+line-height: 22px;
+color: #000000;
+}
+
+.payment-form h2.payment{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  }
+
+/* payment-container end */
+
+/* media query */
+
+@media only screen and (max-width: 416px) {
+  header span {
+    font-size: 16px;
+  }
+
+  header.justify-content-end {
+    justify-content: center !important;
+  }
+
+  header p.phone_number {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  header p {
+    text-align: center;
+  }
+
+  #form_container {
+    padding: 35px 0;
+  }
+
+  #registration_form {
+    background-image: none;
+  }
+
+  .award_wining {
+    display: none;
+  }
+
+  .feedback_text {
+    width: 180px;
+  }
+
+  #review_container ul li {
+    width: 32%;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  #review_container .justify-content-around {
+    justify-content: flex-start !important;
+  }
+
+  #registered_boat_container {
+    padding: 50px 10px;
+  }
+
+  #registered_boat_container h1 {
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    padding: 22px 0;
+  }
+
+  #registered_boat_container p.para {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  .boat_registered p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    color: #000000;
+  }
+
+  #process_container {
+    padding: 35px 20px;
+  }
+
+  #pricing_container {
+    background: #f6f7fa;
+    padding: 90px 35px;
+  }
+
+  #pricing_container h1 {
+    font-family: Quattrocento;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
+  }
+
+  footer {
+    padding: 80px 20px;
+    background: #024559;
+  }
+
+  p.caption {
+    font-size: 17px;
+  }
+
+  footer p.aligned {
+    text-align: left;
+  }
+  footer button.aligned {
+    float: left;
+  }
+
+  ul.process_list li {
+    padding: 0;
+    max-width: 103px;
+    margin: 5px;
+  }
+
+  span.box {
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    padding: 32px 16px;
+    max-height: 109px;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  ul.process_list li {
+    padding: 13px 0px;
+    list-style: none;
+  }
+
+  #registered_boat_container {
+    background: #f6f7fa;
+    padding: 10px 0;
+  }
+
+  p.size {
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 50px;
+    background: #024559;
+  }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  }
+}
