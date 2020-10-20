@@ -129,7 +129,7 @@ header span.bold {
 }
 
 .feedback {
-  margin: 25px 0;
+  margin: 25px 0 12px 0;
 }
 
 .feedback_text {
@@ -400,6 +400,18 @@ color: #000000;
 /* media query */
 
 @media only screen and (max-width: 416px) {
+
+  #registration_form h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  #registration_form h2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+
   header span {
     font-size: 16px;
   }
@@ -423,6 +435,8 @@ color: #000000;
 
   #registration_form {
     background-image: none;
+    margin-top: 28px;
+    padding: 20px;
   }
 
   .award_wining {
@@ -430,7 +444,12 @@ color: #000000;
   }
 
   .feedback_text {
-    width: 180px;
+    width: 275px;
+  }
+
+
+  #review_container ul li p{
+    min-height: auto!important;
   }
 
   #review_container ul li {
@@ -510,7 +529,7 @@ color: #000000;
   ul.process_list li {
     padding: 0;
     max-width: 103px;
-    margin: 5px;
+    margin: 13px;
   }
 
   span.box {

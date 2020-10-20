@@ -47,7 +47,8 @@ export default {
   },
 
   env: {
-    baseUrl: process.env.BASE_URL
+    apiBaseUrl: process.env.API_BASE_URL,
+    stripeKey:process.env.STRIPE_KEY
   },
   ssr: false,
 }

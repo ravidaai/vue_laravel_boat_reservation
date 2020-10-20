@@ -15,6 +15,7 @@
               <span class="award_wining">Award Winning</span>
 
               <h1>Get Registered, <br />then get out there!</h1>
+       
               <h2>
                 Fast & Easy full service boat registration for as little as
                 <strong>$100!</strong>
@@ -32,7 +33,10 @@
                     "This service was so easy and fast! Could not be happier."
                   </p></span
                 >
+                
+                
               </div>
+              <img src="~/assets/img/trustpilot.png" width="302" class="transpilot"/>
 
               <div class="form-group">
                 <label>Full Name</label>
@@ -85,7 +89,7 @@
                   class="form-control"
                   id=""
                   v-model.trim="$v.form.state.$model"
-                  v-on:input="$v.form.state.$touch"
+                  
                   v-bind:class="{
                     error: $v.form.state.$error,
                     valid: $v.form.state.$dirty && !$v.form.state.$invalid,
@@ -249,7 +253,7 @@
 
     <section id="process_container">
       <h1>Our Process</h1>
-      <ul class="process_list d-flex justify-content-around flex-wrap">
+      <ul class="process_list d-flex justify-content-lg-around justify-content-xl-around justify-content-md-around justify-content-start flex-wrap">
         <li>
           <span class="box">
             <img src="~/assets/img/pick_your_service.png" />
@@ -257,7 +261,7 @@
           <p>Pick your Service</p>
         </li>
         <li>
-          <img src="~/assets/img/double-arrow.png" class="double-arrow" />
+          <img src="~/assets/img/double-arrow.png" class="double-arrow" width="25"/>
         </li>
 
         <li>
@@ -267,7 +271,7 @@
           <p>Provide information</p>
         </li>
         <li>
-          <img src="~/assets/img/double-arrow.png" class="double-arrow" />
+          <img src="~/assets/img/double-arrow.png" class="double-arrow" width="25"/>
         </li>
 
         <li>
@@ -277,7 +281,7 @@
           <p>We file with your state</p>
         </li>
         <li>
-          <img src="~/assets/img/double-arrow.png" class="double-arrow" />
+          <img src="~/assets/img/double-arrow.png" class="double-arrow" width="25"/>
         </li>
 
         <li>
@@ -360,14 +364,21 @@ export default {
       if (!this.$v.form.$invalid) {
         //this.$store.state.full_name=this.full_name;
         this.$router.push({path: '/payment', query:{full_name: this.form.full_name, email: this.form.email, phone: this.form.phone, state: this.form.state}})
-        console.log("submitted", this.form);
+        //console.log("submitted", this.form);
       } else {
         console.log("invalid form");
       }
     },
-  }
+  },
+  mounted() {
+    this.form.state='';
+    //console.log(process.env.apiBaseUrl);
+  },
 };
 </script>
 
-<style>
+<style  scoped>
+img.transpilot{
+    margin:7px 0 25px 0;
+}
 </style>

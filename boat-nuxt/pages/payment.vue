@@ -273,9 +273,7 @@ export default {
       if (window.Stripe === undefined) {
         alert("Stripe V3 library not loaded!");
       } else {
-        const stripe = window.Stripe(
-          "pk_test_51HMO5LLCtCRFVzfpRThDM6j97O6xvnarOkHd7H1wrhX6wu0CAdSQf4NviGVWGVqUadAG3Hv1nzmTPPNh0XdPhyjT00QgSGYLsD"
-        );
+        const stripe = window.Stripe(process.env.stripeKey);
         this.card.stripe = stripe;
 
         const elements = stripe.elements();
@@ -393,7 +391,7 @@ export default {
             stripeToken: token,
           };
           axios
-            .post("https://boat-online-registration.com/api/register", postData, axiosConfig)
+            .post(process.env.apiBaseUrl+'/register', postData, axiosConfig)
             .then((res) => {
               //console.log(res.data.success);
               this.card.loading=false;

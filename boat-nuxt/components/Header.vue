@@ -24,6 +24,9 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style  scoped>
+p{
+  margin: 0;
+  padding: 0;
+}
 </style>
