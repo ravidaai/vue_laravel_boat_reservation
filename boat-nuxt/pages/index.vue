@@ -24,7 +24,7 @@
               <div
                 class="feedback d-flex justify-content-between align-items-center"
               >
-                <img src="~/assets/img/review.png" />
+                <img src="~/assets/img/review.svg" />
                 <span class="feedback_text">
                   <span class="white_arrow"
                     ><img src="~/assets/img/white-arrow.png"
