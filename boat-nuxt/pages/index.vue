@@ -36,7 +36,7 @@
                 
                 
               </div>
-              <img src="~/assets/img/trustpilot.png" width="302" class="transpilot"/>
+              <img src="~/assets/img/trustpilot.svg" width="302" class="transpilot"/>
 
               <div class="form-group">
                 <label>Full Name</label>
